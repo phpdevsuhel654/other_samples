@@ -15,7 +15,7 @@
                     </div>
 
                     <div class="panel-body">
-                        {!! Form::model($product, ['method' => 'PUT', 'url' => "/admin/products/{$product->id}", 'class' => 'form-horizontal', 'role' => 'form']) !!}
+                        {!! Form::model($product, ['method' => 'PUT', 'url' => "/admin/products/{$product->id}", 'class' => 'form-horizontal', 'role' => 'form', 'enctype' => 'multipart/form-data']) !!}
 
                             @include('admin.products._form')
 

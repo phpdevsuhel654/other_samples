@@ -15,10 +15,17 @@
                     </div>
 
                     <div class="panel-body">
-                        <p>{{ $product->body }}</p>
+                        <p>{{ $product->description }}</p>
 
                         <p><strong>Category: </strong>{{ $product->category->name }}</p>
-                        <p><strong>Tags: </strong>{{ $product->tags->implode('name', ', ') }}</p>
+                        <p>
+                            <strong>Photo: </strong>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <img class="img-responsive" src="{{ asset('uploads/images') }}/{{ $product->image }}" alt="{{ $product->image }}">
+                                </div>
+                            </div>
+                        </p>
                     </div>
                 </div>
             </div>

@@ -44,6 +44,7 @@
                     <!-- Left Side Of Navbar -->
 
                     @includeWhen(Auth::user(), 'layouts._admin_menu')
+                    @includeWhen(!Auth::user(), 'layouts._normal_menu')
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">

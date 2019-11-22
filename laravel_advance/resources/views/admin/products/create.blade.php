@@ -15,7 +15,7 @@
                     </div>
 
                     <div class="panel-body">
-                        {!! Form::open(['url' => '/admin/products', 'class' => 'form-horizontal', 'role' => 'form']) !!}
+                        {!! Form::open(['url' => '/admin/products', 'class' => 'form-horizontal', 'role' => 'form', 'enctype' => 'multipart/form-data']) !!}
 
                             @include('admin.products._form')
 

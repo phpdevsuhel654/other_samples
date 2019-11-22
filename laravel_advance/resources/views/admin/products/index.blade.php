@@ -19,10 +19,9 @@
                             <thead>
                                 <tr>
                                     <th>Title</th>
-                                    <th>Body</th>
+                                    <th>Description</th>
                                     <th>Author</th>
                                     <th>Category</th>
-                                    <th>Tags</th>
                                     <th>Published</th>
                                     <th>Action</th>
                                 </tr>
@@ -31,10 +30,9 @@
                                 @forelse ($products as $product)
                                     <tr>
                                         <td>{{ $product->title }}</td>
-                                        <td>{{ str_limit($product->body, 60) }}</td>
+                                        <td>{{ str_limit($product->description, 60) }}</td>
                                         <td>{{ $product->user->name }}</td>
                                         <td>{{ $product->category->name }}</td>
-                                        <td>{{ $product->tags->implode('name', ', ') }}</td>
                                         <td>{{ $product->published }}</td>
                                         <td>
                                             @if (Auth::user()->is_admin)
